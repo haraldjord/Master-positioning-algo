@@ -66,8 +66,8 @@ for i=1:20 %% update plot inside this loop.
 %     plot3(pos(1), pos(2), tz(i), '*');
     %v2:
     [x,y] =  TDoA(d21, d31, s1,s2,s3, tz(i), tx(i), ty(i));
-    plotData = add_tag_pos(plotData, x,y,tz(i),'r');           % plot TDoA pos in red 
-    plotData = add_tag_pos(plotData, tx(i), ty(i), tz(i),'b'); % plot real value in blue
+    plotData = plot_tag_pos(plotData, x,y,tz(i),'r');           % plot TDoA pos in red 
+    plotData = plot_tag_pos(plotData, tx(i), ty(i), tz(i),'b'); % plot real value in blue
     
     refreshdata
     drawnow
