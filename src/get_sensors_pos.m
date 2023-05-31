@@ -1,6 +1,9 @@
 function [plotData, s1, s2 ,s3] = get_sensors_pos(plotData, p1, p2, p3)
 %GET_SENSORS_POS Summary of this function goes here
+%   Transform latitude, longitude GPS position into xy plane and plot the
+%   position.
 %   Detailed explanation goes here
+%   
 
 
 %create a world geodetic system of 1984 reference ellipsoid with length
