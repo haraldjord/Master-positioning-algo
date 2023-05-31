@@ -2,17 +2,21 @@
 clear all; close all; 
 addpath(fullfile(pwd,"src"))
 %% global variables
+global LOG_folder dataFolder;
 global do_TDOA; do_TDOA = false;
 global endLoop; endLoop = false;
 global newTag_node1 newTag_node2 newTag_node3;
 newTag_node1 = false; newTag_node2 = false; newTag_node3 = false;
 c = 1500;% [m/s] signal speed
+%% Make new LOG and data folder
+[LOG_folder, dataFolder] = make_new_log();
 %% Setup serial port
 device = serialport("COM3", 9600);
 %% initiate node struct
 ID.gps = strings(1,3);   % string from SLIM uppon GPS location
 ID.tag = strings(1,10);  % string from SLIM uppon tag detection
 ID.timestamp = [];       % timestamp in unix time and ms 
+ID.tagData = [];         % tagData --> depth of tag
 ID.position = [];        % longitude and latitude 
 node.ID1 = ID;
 node.ID2 = ID;
@@ -33,7 +37,7 @@ p.SizeDataSource = 'plotData.S';
 plotData = draw_circle(plotData, 250, 50); % draw circle diameter and points on plot
 %%button handle
 ButtonHandle = uicontrol(fig1,'Style', 'PushButton', ...
-                              'String', 'Stop loop',...
+                              'String', 'SA',...
                               'Callback', @pushButton_handler);
 
 
@@ -72,7 +76,7 @@ while (~endLoop)
 %     if newTag_node1
 %         disp("node1 new tag")
 %     end
-    if newTag_node2
+    if newTag_node3
         disp("why");
     end
 

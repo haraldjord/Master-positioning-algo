@@ -1,8 +1,12 @@
 
-function [T21, T31, bool] =  verify_lastTag(node)
+function [T21, T31, depth, bool] =  verify_lastTag(node)
     % get last tag detection
     elem1 = node.ID1.tagElement; elem2 = node.ID2.tagElement; elem3 = node.ID3.tagElement;
     t1 = node.ID1.timestamp(elem1); t2 = node.ID2.timestamp(elem2); t3 = node.ID3.timestamp(elem3);
+    
+    % get depth
+    depth = 0; % lol
+    
     
     % Obseves that somethimes GPS misses by one second
     if (abs(t1 - t2) < 1) && (abs(t1-t2) < 1) 
