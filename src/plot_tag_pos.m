@@ -12,14 +12,14 @@ function [plotData] = plot_tag_pos(plotData, x,y,z,collor)
             collor  = [0,0,1];
         end
     else
-        collor = [1,1,1]; % black is default
+        collor = [0,0,0]; % black is default
     end
 
-    plotData.X(end+1) = x;
-    plotData.Y(end+1) = y;
-    plotData.Z(end+1) = z;
+    plotData.X(1,end+1) = x;
+    plotData.Y(1,end+1) = y;
+    plotData.Z(1,end+1) = z;
     plotData.C(end+1,:) = collor;
-    plotData.S(end+1) = 50;
+    plotData.S(1,end+1) = 50;
 
 end
 

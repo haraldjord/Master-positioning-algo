@@ -21,21 +21,23 @@ function[node] = saveData(node,str)
     elseif contains(str, "ID:3")
         % get data to struct
         id = "3";
-        [node.ID3, newTag_node3] = extractData(node.ID2,data,str,id);
+        [node.ID3, newTag_node3] = extractData(node.ID3,data,str,id);
     end
 end
 
 function [ID, newTag] = extractData(ID,data, str, id)
     global LOG_folder
-    disp(LOG_folder)
     newTag = false;
     if contains(data(2), "TBR") % new TBR data
-        temp_t = split(data(1,4),':')';
-        temp_t = str2double(temp_t(1,2));
-        temp_tagData = split(data(1,7),':')';
-        temp_tagData = temp_tagData(1,2);
-        file = LOG_folder + "/tag/ID" + id + "tag.txt";
-        
+        try
+            temp_t = split(data(1,4),':')';
+            temp_t = str2double(temp_t(1,2));
+            temp_tagData = split(data(1,7),':')';
+            temp_tagData = temp_tagData(1,2);
+            file = LOG_folder + "/tag/ID" + id + "tag.txt";
+        catch
+            disp("corrupted tbr xtring");
+        end
         if isempty(ID.timestamp)
             ID.tag(end+1,:) = data;
             ID.timestamp(end+1,1) = temp_t; % save timestamp to struct 
@@ -43,14 +45,16 @@ function [ID, newTag] = extractData(ID,data, str, id)
             write_txt(file ,str)
             newTag = true;
         else
-            if temp_t ~= ID.timestamp(end,1) % timespamp sometimes enters two times
-                ID.tag(end+1,:) = data;
-                ID.timestamp(end+1,1) = temp_t;     % save timestamp to struct
-                ID.tagData(end+1,1) = temp_tagData;
-                write_txt(file ,str)
-                newTag = true;
-            else 
-                disp("timestamp already exist in struct!");
+            if temp_t ~= ID.timestamp(end,1)
+                try
+                    ID.tag(end+1,:) = data;
+                    ID.timestamp(end+1,1) = temp_t;     % save timestamp to struct
+                    ID.tagData(end+1,1) = temp_tagData;
+                    write_txt(file ,str)
+                    newTag = true;
+                catch 
+                    disp("corrupted tag string");
+                end
             end
         end
     elseif contains(data(1), "GPS") % new GPS data
@@ -68,6 +72,7 @@ function [ID, newTag] = extractData(ID,data, str, id)
 end
 
 function write_txt(file, str)
+    str = str + '\n';
     fid = fopen(file, 'a');
     fprintf(fid, str);
     fclose(fid);  

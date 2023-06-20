@@ -1,0 +1,9 @@
+ID:3 GPS , latitude: 634395604, longitude: 104005695 
+ID:3 GPS , latitude: 634395630, longitude: 104005658 
+ID:3 GPS , latitude: 634395548, longitude: 104005839 
+ID:3 GPS , latitude: 634395721, longitude: 104006058 
+ID:3 GPS , latitude: 634395560, longitude: 104006098 
+ID:3 GPS , latitude: 634395733, longitude: 104005753 
+ID:3 GPS , latitude: 634396323, longitude: 104006192 
+ID:3 GPS , latitude: 634396658, longitude: 104006219 
+ID:3 GPS , latitude: 634396567, longitude: 104005735 

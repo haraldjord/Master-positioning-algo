@@ -1,0 +1,4 @@
+ID:1, TBR, tbrSN: 47 , timestamp: 1686230509.785 , tagProt: 0, tagID:5, tagData:57, SNR:34, tagFreq:69, memAddr:19585
+ID:1, TBR, tbrSN: 47 , timestamp: 1686230523.860 , tagProt: 0, tagID:5, tagData:58, SNR:31, tagFreq:69, memAddr:19586
+ID:1, TBR, tbrSN: 47 , timestamp: 1686230538.74 , tagProt: 0, tagID:5, tagData:59, SNR:37, tagFreq:69, memAddr:19587
+ID:1, TBR, tbrSN: 47 , timestamp: 1686230549.429 , tagProt: 0, tagID:5, tagData:60, SNR:37, tagFreq:69, memAddr:19588

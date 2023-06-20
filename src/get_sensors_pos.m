@@ -5,10 +5,10 @@ function [plotData, s1, s2 ,s3] = get_sensors_pos(plotData, p1, p2, p3)
 %   Detailed explanation goes here
 %   
 
-
 %create a world geodetic system of 1984 reference ellipsoid with length
 %unit of meters
 wgs84 = wgs84Ellipsoid("m");
+
 
 % Calculate the geodetic distance and azimuth between the two points
 [dist1_2, az1_2] = distance(p1, p2, wgs84);

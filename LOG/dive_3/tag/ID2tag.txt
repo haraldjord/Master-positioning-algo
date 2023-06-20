@@ -1,0 +1,1 @@
+ID:2, TBR, tbrSN: 22 , timestamp: 1686230549.418 , tagProt: 0, tagID:5, tagData:60, SNR:21, tagFreq:69, memAddr:19335

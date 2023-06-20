@@ -1,0 +1,5 @@
+ID:1 GPS , latitude: 633306048, longitude: 100735221 
+ID:1 GPS , latitude: 633306057, longitude: 100735205 
+ID:1 GPS , latitude: 633306141, longitude: 100735111 
+ID:1 GPS , latitude: 633306088, longitude: 100735110 
+ID:1 GPS , latitude: 633306131, longitude: 100735162 

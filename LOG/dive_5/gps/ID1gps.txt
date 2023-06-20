@@ -1,0 +1,15 @@
+ID:1 GPS , latitude: 634392403, longitude: 104000745 
+ID:1 GPS , latitude: 634392377, longitude: 104000751 
+ID:1 GPS , latitude: 634392345, longitude: 104000805 
+ID:1 GPS , latitude: 634392424, longitude: 104000764 
+ID:1 GPS , latitude: 634392524, longitude: 104000818 
+ID:1 GPS , latitude: 634392490, longitude: 104001012 
+ID:1 GPS , latitude: 634392580, longitude: 104000889 
+ID:1 GPS , latitude: 634392595, longitude: 104000862 
+ID:1 GPS , latitude: 634392485, longitude: 104000772 
+ID:1 GPS , latitude: 634392491, longitude: 104000866 
+ID:1 GPS , latitude: 634392660, longitude: 104000911 
+ID:1 GPS , latitude: 634392569, longitude: 104000730 
+ID:1 GPS , latitude: 634392586, longitude: 104000713 
+ID:1 GPS , latitude: 634392652, longitude: 104000754 
+ID:1 GPS , latitude: 634392656, longitude: 104000523 
